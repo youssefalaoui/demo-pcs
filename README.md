@@ -1,6 +1,11 @@
 # DemoPcs1
 Parent => Child: The master branch shows how to transfer a message from parent to child via Input() decorator
+
 Child => Parent: the fromc2p branch shows hot to transfer a message fron child to parent via Output() and EventEmitter
+
+Child => Parent: fromc2pv2 branch ViewChild() allows parent to access all attributes and functions of the child. The child will not be available until the view is fully initialized, thus the use of AfterViewInit.
+
+Any => Any: any2any branch is an advanced branch that introduces a shared service to pass datra between unrelated components (like sibling). The BehaviorSubject main benefit is to ensure that every component consuming the service receives the most recent up-to-date data
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
