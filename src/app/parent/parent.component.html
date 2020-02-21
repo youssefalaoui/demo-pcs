@@ -1,8 +1,8 @@
 <nb-card status="default">
     <nb-card-header>Parent</nb-card-header>
     <nb-card-body>
-        Parent message: {{ message }}
-        <app-child [message]="message">
+        Message: {{ message }}
+        <app-child (messageEvent)="receiveMessage($event)">
         </app-child>
     </nb-card-body>
 </nb-card>
