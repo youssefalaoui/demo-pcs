@@ -1,6 +1,7 @@
 # DemoPcs1
 Parent => Child: The master branch shows how to transfer a message from parent to child via Input() decorator
 Child => Parent: the fromc2p branch shows hot to transfer a message fron child to parent via Output() and EventEmitter
+Child => Parent: ViewChild() allows parent to access all attributes and functions of the child. The child will not be available until the view is fully initialized, thus the use of AfterViewInit.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 

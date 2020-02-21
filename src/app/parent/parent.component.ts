@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { ChildComponent } from './../child/child.component';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit {
-  message = 'Hello world (default parrent message)';
+export class ParentComponent implements AfterViewInit {
+  @ViewChild(ChildComponent, {static: false}) child;
 
   constructor() { }
 
-  ngOnInit() {
+  message = 'Hello world (default parrent message)';
+
+  ngAfterViewInit() {
+    this.message = this.child.message;
   }
 
   receiveMessage($event) {
